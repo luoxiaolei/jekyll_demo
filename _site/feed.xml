@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-26T14:17:09+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luo Xiaolei’s blog</title><subtitle>Share my bugs I met.</subtitle><entry><title type="html">Arthas用法</title><link href="http://localhost:4000/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html" rel="alternate" type="text/html" title="Arthas用法" /><published>2019-05-25T00:00:00+08:00</published><updated>2019-05-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/25/Arthas%E7%94%A8%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当你遇到以下类似问题而束手无策时，Arthas可以帮助你解决：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;这个类从哪个 jar 包加载的？ 为什么会报各种类相关的 Exception？&lt;/li&gt;
+  &lt;li&gt;我改的代码为什么没有执行到？
+难道是我没 commit？分支搞错了？&lt;/li&gt;
+  &lt;li&gt;遇到问题无法在线上debug，难道只能通过加日志再重新发布吗？&lt;/li&gt;
+  &lt;li&gt;线上遇到某个用户的数据处理有问题，但线上同样无法 debug，线下无法重现！&lt;/li&gt;
+  &lt;li&gt;是否有一个全局视角来查看系统的运行状况？&lt;/li&gt;
+  &lt;li&gt;有什么办法可以监控到JVM的实时运行状态？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
+&lt;h4 id=&quot;快速安装&quot;&gt;快速安装&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://alibaba.github.io/arthas/arthas-boot.jar
+java -jar arthas-boot.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;aliyun的镜像&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar --repo-mirror aliyun --use-http
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;gitee镜像&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://arthas.gitee.io/arthas-boot.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Arthas 支持在 Linux/Unix/Mac 等平台上一键安装，请复制以下内容，并粘贴到命令行中，敲 回车 执行即可&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -L https://alibaba.github.io/arthas/install.sh | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;gitee镜像&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -L https://arthas.gitee.io/install.sh | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;全量安装&quot;&gt;全量安装&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;amp;g=com.taobao.arthas&amp;amp;a=arthas-packaging&amp;amp;e=zip&amp;amp;c=bin&amp;amp;v=LATEST&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;解压后，在文件夹里有arthas-boot.jar，直接用java -jar的方式启动&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;打印帮助信息&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;手动安装&quot;&gt;手动安装&lt;/h4&gt;
+&lt;h5 id=&quot;linux&quot;&gt;Linux&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://maven.aliyun.com/repository/public/com/taobao/arthas/arthas-packaging/3.x.x/arthas-packaging-3.x.x-bin.zip&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;解压缩arthas的压缩包
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;unzip arthas-packaging-bin.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安装Arthas（注意，这里根据你需要诊断的Java进程的所属用户进行切换）
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo su admin
+rm -rf /home/admin/.arthas/lib/*
+cd arthas
+./install-local.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;启动Arthas
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./as.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h5 id=&quot;windows&quot;&gt;Windows&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://maven.aliyun.com/repository/public/com/taobao/arthas/arthas-packaging/3.x.x/arthas-packaging-3.x.x-bin.zip&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;解压缩arthas的压缩包&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;基本用法&quot;&gt;基本用法&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;启用arthas&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;选择应用java进程&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar
+* [1]: 35542
+  [2]: 71560 arthas-demo.jar
+Demo进程是第2个，则输入2，再输入回车/enter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;查看dashboard&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dashboard
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;通过thread命令来获取到arthas-demo进程的Main Class&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;thread 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;通过jad来反编译Main Class&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jad demo.MathGame
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;通过watch命令来查看demo.MathGame#primeFactors函数的返回值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;watch demo.MathGame primeFactors returnObj
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;退出arthas&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;quit或者exit Attach到目标进程上的arthas还会继续运行，端口会保持开放，下次连接时可以直接连接上。
+shutdown 完全退出arthas
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;卸载&quot;&gt;卸载&lt;/h3&gt;
+&lt;h4 id=&quot;linux-1&quot;&gt;Linux&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm -rf ~/.arthas/
+rm -rf ~/logs/arthas
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;windows-1&quot;&gt;Windows&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;直接删除user home下面的.arthas和logs/arthas目录
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;常用命令&quot;&gt;常用命令&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;sysprop 打印所有的System Properties信息
+    &lt;ul&gt;
+      &lt;li&gt;sysprop java.version&lt;/li&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;sysprop&lt;/td&gt;
+              &lt;td&gt;grep user&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+      &lt;li&gt;sysprop testKey testValue&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sysenv 命令可以获取到环境变量。和sysprop命令类似。&lt;/li&gt;
+  &lt;li&gt;jvm 命令会打印出JVM的各种详细信息。&lt;/li&gt;
+  &lt;li&gt;dashboard 命令可以查看当前系统的实时数据面板。输入 Q 或者 Ctrl+C 可以退出dashboard命令。&lt;/li&gt;
+  &lt;li&gt;thread 查看所有线程信息&lt;/li&gt;
+  &lt;li&gt;thread 16 查看线程ID 16的栈：&lt;/li&gt;
+  &lt;li&gt;thread -n 3 查看CPU使用率top n线程的栈&lt;/li&gt;
+  &lt;li&gt;thread -n 3 -i 5000 查看5秒内的CPU使用率top n线程栈&lt;/li&gt;
+  &lt;li&gt;thread -b 查找线程是否有阻塞&lt;/li&gt;
+  &lt;li&gt;java -jar arthas-boot.jar –target-ip 默认情况下，arthas yourip server侦听的是 127.0.0.1 这个IP，如果希望远程可以访问，可以使用–target-ip的参数。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;参考链接&quot;&gt;参考链接&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/index.html&quot;&gt;arthas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/manual-install.html&quot;&gt;手动安装arthas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/watch.html&quot;&gt;watch用法&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/arthas-tutorials?language=cn&quot;&gt;arthas-tutorials基础教程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/arthas-tutorials?language=cn&amp;amp;id=arthas-advanced&quot;&gt;arthas-tutorials-advanced进阶教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。</summary></entry></feed>
