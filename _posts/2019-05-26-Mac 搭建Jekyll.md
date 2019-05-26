@@ -2,7 +2,7 @@
 > Jekyll is a simple, extendable, static site generator. You give it text written in your favorite markup language and it churns through layouts to create a static website. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.
 
 ### 安装
-1. [Install a full Ruby development environment](http://note.youdao.com/noteshare?id=1c723b283ff559dfc020ba3fbdee5265)
+1. [Install a full Ruby development environment](https://luoxiaolei.github.io/2019/05/26/Mac-install-rbenv-&-ruby.html)
 2. Install Jekyll and bundler gems
 
 ```
