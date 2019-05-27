@@ -1,4 +1,357 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-26T14:17:09+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luo Xiaolei’s blog</title><subtitle>Share my bugs I met.</subtitle><entry><title type="html">Arthas用法</title><link href="http://localhost:4000/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html" rel="alternate" type="text/html" title="Arthas用法" /><published>2019-05-25T00:00:00+08:00</published><updated>2019-05-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/25/Arthas%E7%94%A8%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-26T17:24:35+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luo Xiaolei’s blog</title><subtitle>Share my bugs I met.</subtitle><entry><title type="html">Mac Duet用法</title><link href="http://localhost:4000/tool/2019/05/26/Mac-Duet%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" rel="alternate" type="text/html" title="Mac Duet用法" /><published>2019-05-26T00:00:00+08:00</published><updated>2019-05-26T00:00:00+08:00</updated><id>http://localhost:4000/tool/2019/05/26/Mac%20Duet%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/tool/2019/05/26/Mac-Duet%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ex-Apple Engineers turn your iPad into an extra display.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;下载地址&quot;&gt;下载地址&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mac
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/2_0/duet-2-0-7-2.zip&quot;&gt;duet for Mac&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;iPad
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/duet-display/id935754064?mt=8&quot;&gt;duet for iPad&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mac
+    &lt;ul&gt;
+      &lt;li&gt;下载解压安装即可&lt;/li&gt;
+      &lt;li&gt;【系统偏好设置】-【安全性与隐私】-【辅助功能】-【允许duet控制您的电脑】&lt;/li&gt;
+      &lt;li&gt;由于duet需要安装需要额外的驱动程序，安装完成后，关闭电脑，再次打开（&lt;strong&gt;注意不是重启，是关闭后再打开&lt;/strong&gt;）&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;iPad
+    &lt;ul&gt;
+      &lt;li&gt;App Store安装即可，无需额外设置&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;使用&quot;&gt;使用&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Mac运行duet&lt;/li&gt;
+  &lt;li&gt;将iPad通过lightning数据线与Mac连接&lt;/li&gt;
+  &lt;li&gt;打开iPad duet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;参考链接&quot;&gt;参考链接&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.duetdisplay.com&quot;&gt;官网&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.duetdisplay.com/getting-started&quot;&gt;getting-started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Ex-Apple Engineers turn your iPad into an extra display.</summary></entry><entry><title type="html">Mac install rbenv &amp;amp; ruby</title><link href="http://localhost:4000/2019/05/26/Mac-install-rbenv-&-ruby.html" rel="alternate" type="text/html" title="Mac install rbenv &amp; ruby" /><published>2019-05-26T00:00:00+08:00</published><updated>2019-05-26T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/26/Mac%20install%20rbenv%20&amp;%20ruby</id><content type="html" xml:base="http://localhost:4000/2019/05/26/Mac-install-rbenv-&amp;-ruby.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Use rbenv to pick a Ruby version for your application and guarantee that your development environment matches production.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;安装rbenv&quot;&gt;安装rbenv&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install rbenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rbenv init
+---------------------------------------
+# Load rbenv automatically by appending
+# the following to ~/.zshrc:
+
+eval &quot;$(rbenv init -)&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vi .zshrc 
+add eval &quot;$(rbenv init -)&quot; to .zshrc 
+$ source .zshrc 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+---------------------------------------------------
+Checking for `rbenv' in PATH: /usr/local/bin/rbenv
+Checking for rbenv shims in PATH: OK
+Checking `rbenv install' support: /usr/local/bin/rbenv-install (ruby-build 20190423)
+Counting installed Ruby versions: none
+  There aren't any Ruby versions installed under `/Users/luoxiaolei/.rbenv/versions'.
+  You can install Ruby versions like so: rbenv install 2.2.4
+Checking RubyGems settings: OK
+Auditing installed plugins: OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;安装ruby&quot;&gt;安装ruby&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# list all available versions:
+$ rbenv install -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# install a Ruby version:
+$ rbenv install 2.6.3
+---------------------------------------------------
+ruby-build: use openssl from homebrew
+Downloading ruby-2.6.3.tar.bz2...
+-&amp;gt; https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.bz2
+Installing ruby-2.6.3...
+Installed ruby-2.6.3 to /Users/luoxiaolei/.rbenv/versions/2.6.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rbenv version
+system (set by /Users/luoxiaolei/.rbenv/version)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rbenv local 2.6.3
+$ rbenv version    
+2.6.3 (set by /Users/luoxiaolei/.ruby-version)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;安装ruby-gems&quot;&gt;安装Ruby gems&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 切换版本后需要刷新一下，否则安装报错
+-----------------------------------------------
+gem install bundler
+Fetching: bundler-2.0.1.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.3.0 directory.
+-----------------------------------------------
+$ rbenv rehash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install bundler
+--------------------------------------------------
+Fetching bundler-2.0.1.gem
+Successfully installed bundler-2.0.1
+Parsing documentation for bundler-2.0.1
+Installing ri documentation for bundler-2.0.1
+Done installing documentation for bundler after 2 seconds
+1 gem installed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 查看gem安装位置
+gem env home
+/Users/luoxiaolei/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;参考连接&quot;&gt;参考连接&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rbenv/rbenv#how-rbenv-hooks-into-your-shell&quot;&gt;rbenv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Use rbenv to pick a Ruby version for your application and guarantee that your development environment matches production.</summary></entry><entry><title type="html">Mac 搭建jekyll</title><link href="http://localhost:4000/2019/05/26/Mac-%E6%90%AD%E5%BB%BAJekyll.html" rel="alternate" type="text/html" title="Mac 搭建jekyll" /><published>2019-05-26T00:00:00+08:00</published><updated>2019-05-26T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/26/Mac%20%E6%90%AD%E5%BB%BAJekyll</id><content type="html" xml:base="http://localhost:4000/2019/05/26/Mac-%E6%90%AD%E5%BB%BAJekyll.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Jekyll is a simple, extendable, static site generator. You give it text written in your favorite markup language and it churns through layouts to create a static website. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://luoxiaolei.github.io/2019/05/26/Mac-install-rbenv-&amp;amp;-ruby.html&quot;&gt;Install a full Ruby development environment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Install Jekyll and bundler gems&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
+----------------------------
+Fetching safe_yaml-1.0.5.gem
+Fetching forwardable-extended-2.6.0.gem
+Fetching liquid-4.0.3.gem
+Fetching kramdown-1.17.0.gem
+Fetching ruby_dep-1.5.0.gem
+Fetching rouge-3.3.0.gem
+Fetching pathutil-0.16.2.gem
+Fetching mercenary-0.3.6.gem
+Fetching ffi-1.11.1.gem
+Fetching rb-inotify-0.10.0.gem
+Fetching rb-fsevent-0.10.3.gem
+Fetching listen-3.1.5.gem
+Fetching jekyll-watch-2.2.1.gem
+Fetching sass-listen-4.0.0.gem
+Fetching sass-3.7.4.gem
+Fetching jekyll-sass-converter-1.5.2.gem
+Fetching concurrent-ruby-1.1.5.gem
+Fetching i18n-0.9.5.gem
+Fetching http_parser.rb-0.6.0.gem
+Fetching eventmachine-1.2.7.gem
+Fetching em-websocket-0.5.1.gem
+Fetching colorator-1.1.0.gem
+Fetching public_suffix-3.0.3.gem
+Fetching addressable-2.6.0.gem
+Fetching jekyll-3.8.5.gem
+Successfully installed safe_yaml-1.0.5
+Successfully installed rouge-3.3.0
+Successfully installed forwardable-extended-2.6.0
+Successfully installed pathutil-0.16.2
+Successfully installed mercenary-0.3.6
+Successfully installed liquid-4.0.3
+Successfully installed kramdown-1.17.0
+Successfully installed ruby_dep-1.5.0
+Building native extensions. This could take a while...
+Successfully installed ffi-1.11.1
+Successfully installed rb-inotify-0.10.0
+Successfully installed rb-fsevent-0.10.3
+Successfully installed listen-3.1.5
+Successfully installed jekyll-watch-2.2.1
+Successfully installed sass-listen-4.0.0
+
+Ruby Sass has reached end-of-life and should no longer be used.
+
+* If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+  primary implementation: https://sass-lang.com/install
+
+* If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+  sassc gem: https://github.com/sass/sassc-ruby#readme
+
+* For more details, please refer to the Sass blog:
+  https://sass-lang.com/blog/posts/7828841
+
+Successfully installed sass-3.7.4
+Successfully installed jekyll-sass-converter-1.5.2
+Successfully installed concurrent-ruby-1.1.5
+Successfully installed i18n-0.9.5
+Building native extensions. This could take a while...
+Successfully installed http_parser.rb-0.6.0
+Building native extensions. This could take a while...
+Successfully installed eventmachine-1.2.7
+Successfully installed em-websocket-0.5.1
+Successfully installed colorator-1.1.0
+Successfully installed public_suffix-3.0.3
+Successfully installed addressable-2.6.0
+Successfully installed jekyll-3.8.5
+Parsing documentation for safe_yaml-1.0.5
+Installing ri documentation for safe_yaml-1.0.5
+Parsing documentation for rouge-3.3.0
+Installing ri documentation for rouge-3.3.0
+Parsing documentation for forwardable-extended-2.6.0
+Installing ri documentation for forwardable-extended-2.6.0
+Parsing documentation for pathutil-0.16.2
+Installing ri documentation for pathutil-0.16.2
+Parsing documentation for mercenary-0.3.6
+Installing ri documentation for mercenary-0.3.6
+Parsing documentation for liquid-4.0.3
+Installing ri documentation for liquid-4.0.3
+Parsing documentation for kramdown-1.17.0
+Installing ri documentation for kramdown-1.17.0
+Parsing documentation for ruby_dep-1.5.0
+Installing ri documentation for ruby_dep-1.5.0
+Parsing documentation for ffi-1.11.1
+Installing ri documentation for ffi-1.11.1
+Parsing documentation for rb-inotify-0.10.0
+Installing ri documentation for rb-inotify-0.10.0
+Parsing documentation for rb-fsevent-0.10.3
+Installing ri documentation for rb-fsevent-0.10.3
+Parsing documentation for listen-3.1.5
+Installing ri documentation for listen-3.1.5
+Parsing documentation for jekyll-watch-2.2.1
+Installing ri documentation for jekyll-watch-2.2.1
+Parsing documentation for sass-listen-4.0.0
+Installing ri documentation for sass-listen-4.0.0
+Parsing documentation for sass-3.7.4
+Installing ri documentation for sass-3.7.4
+Parsing documentation for jekyll-sass-converter-1.5.2
+Installing ri documentation for jekyll-sass-converter-1.5.2
+Parsing documentation for concurrent-ruby-1.1.5
+Installing ri documentation for concurrent-ruby-1.1.5
+Parsing documentation for i18n-0.9.5
+Installing ri documentation for i18n-0.9.5
+Parsing documentation for http_parser.rb-0.6.0
+unknown encoding name &quot;chunked\r\n\r\n25&quot; for ext/ruby_http_parser/vendor/http-parser-java/tools/parse_tests.rb, skipping
+Installing ri documentation for http_parser.rb-0.6.0
+Parsing documentation for eventmachine-1.2.7
+Installing ri documentation for eventmachine-1.2.7
+Parsing documentation for em-websocket-0.5.1
+Installing ri documentation for em-websocket-0.5.1
+Parsing documentation for colorator-1.1.0
+Installing ri documentation for colorator-1.1.0
+Parsing documentation for public_suffix-3.0.3
+Installing ri documentation for public_suffix-3.0.3
+Parsing documentation for addressable-2.6.0
+Installing ri documentation for addressable-2.6.0
+Parsing documentation for jekyll-3.8.5
+Installing ri documentation for jekyll-3.8.5
+Done installing documentation for safe_yaml, rouge, forwardable-extended, pathutil, mercenary, liquid, kramdown, ruby_dep, ffi, rb-inotify, rb-fsevent, listen, jekyll-watch, sass-listen, sass, jekyll-sass-converter, concurrent-ruby, i18n, http_parser.rb, eventmachine, em-websocket, colorator, public_suffix, addressable, jekyll after 41 seconds
+Successfully installed bundler-2.0.1
+Parsing documentation for bundler-2.0.1
+Done installing documentation for bundler after 1 seconds
+26 gems installed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create a new Jekyll site at ./myblog&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new myblog
+----------------------------------------
+Running bundle install in /Users/luoxiaolei/Documents/project/ruby/myblog... 
+
+  Bundler: Fetching gem metadata from https://rubygems.org/...............
+  Bundler: Fetching gem metadata from https://rubygems.org/..
+  Bundler: Resolving dependencies...
+  Bundler: Using public_suffix 3.0.3
+  Bundler: Using addressable 2.6.0
+  Bundler: Using bundler 2.0.1
+  Bundler: Using colorator 1.1.0
+  Bundler: Using concurrent-ruby 1.1.5
+  Bundler: Using eventmachine 1.2.7
+  Bundler: Using http_parser.rb 0.6.0
+  Bundler: Using em-websocket 0.5.1
+  Bundler: Using ffi 1.11.1
+  Bundler: Using forwardable-extended 2.6.0
+  Bundler: Using i18n 0.9.5
+  Bundler: Using rb-fsevent 0.10.3
+  Bundler: Using rb-inotify 0.10.0
+  Bundler: Using sass-listen 4.0.0
+  Bundler: Using sass 3.7.4
+  Bundler: Using jekyll-sass-converter 1.5.2
+  Bundler: Using ruby_dep 1.5.0
+  Bundler: Using listen 3.1.5
+  Bundler: Using jekyll-watch 2.2.1
+  Bundler: Using kramdown 1.17.0
+  Bundler: Using liquid 4.0.3
+  Bundler: Using mercenary 0.3.6
+  Bundler: Using pathutil 0.16.2
+  Bundler: Using rouge 3.3.0
+  Bundler: Using safe_yaml 1.0.5
+  Bundler: Using jekyll 3.8.5
+  Bundler: Fetching jekyll-feed 0.12.1
+  Bundler: Installing jekyll-feed 0.12.1
+  Bundler: Fetching jekyll-seo-tag 2.6.1
+  Bundler: Installing jekyll-seo-tag 2.6.1
+  Bundler: Fetching minima 2.5.0
+  Bundler: Installing minima 2.5.0
+  Bundler: Bundle complete! 4 Gemfile dependencies, 29 gems now installed.
+  Bundler: Use `bundle info [gemname]` to see where a bundled gem is installed.The dependency tzinfo-data (&amp;gt;= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+New jekyll site installed in /Users/luoxiaolei/Documents/project/ruby/myblog. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Change into your new directory&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd myblog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Build the site and make it available on a local server&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
+---------------------------------------
+Configuration file: /Users/luoxiaolei/Documents/project/ruby/myblog/_config.yml
+            Source: /Users/luoxiaolei/Documents/project/ruby/myblog
+       Destination: /Users/luoxiaolei/Documents/project/ruby/myblog/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.399 seconds.
+ Auto-regeneration: enabled for '/Users/luoxiaolei/Documents/project/ruby/myblog'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Now browse to http://localhost:4000&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;参考链接&quot;&gt;参考链接&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Jekyll is a simple, extendable, static site generator. You give it text written in your favorite markup language and it churns through layouts to create a static website. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.</summary></entry><entry><title type="html">Arthas用法</title><link href="http://localhost:4000/tech/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html" rel="alternate" type="text/html" title="Arthas用法" /><published>2019-05-25T10:33:13+08:00</published><updated>2019-05-25T10:33:13+08:00</updated><id>http://localhost:4000/tech/2019/05/25/Arthas%E7%94%A8%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/tech/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -151,16 +504,7 @@ rm -rf ~/logs/arthas
   &lt;li&gt;sysprop 打印所有的System Properties信息
     &lt;ul&gt;
       &lt;li&gt;sysprop java.version&lt;/li&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;sysprop&lt;/td&gt;
-              &lt;td&gt;grep user&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sysprop | grep user&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;sysprop testKey testValue&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
