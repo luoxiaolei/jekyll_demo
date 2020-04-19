@@ -1,529 +1,608 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-26T17:24:35+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luo Xiaolei’s blog</title><subtitle>Share my bugs I met.</subtitle><entry><title type="html">Mac Duet用法</title><link href="http://localhost:4000/tool/2019/05/26/Mac-Duet%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" rel="alternate" type="text/html" title="Mac Duet用法" /><published>2019-05-26T00:00:00+08:00</published><updated>2019-05-26T00:00:00+08:00</updated><id>http://localhost:4000/tool/2019/05/26/Mac%20Duet%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/tool/2019/05/26/Mac-Duet%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Ex-Apple Engineers turn your iPad into an extra display.&lt;/p&gt;
-&lt;/blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-19T16:58:59+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luo Xiaolei’s blog</title><subtitle>Share my bugs I met.</subtitle><entry><title type="html">Crontab</title><link href="http://localhost:4000/2019/10/01/Crontab.html" rel="alternate" type="text/html" title="Crontab" /><published>2019-10-01T00:00:00+08:00</published><updated>2019-10-01T00:00:00+08:00</updated><id>http://localhost:4000/2019/10/01/Crontab</id><content type="html" xml:base="http://localhost:4000/2019/10/01/Crontab.html">&lt;h1 id=&quot;crontab介绍&quot;&gt;crontab介绍&lt;/h1&gt;
+&lt;p&gt;用于创建定时执行的任务
+&lt;img src=&quot;https://www.linuxidc.com/upload/2015_02/150223094058673.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;下载地址&quot;&gt;下载地址&lt;/h3&gt;
+&lt;h1 id=&quot;常用命令&quot;&gt;常用命令&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;Mac
+  &lt;li&gt;创建cron任务
+```
+crontab -e
+进入vi模式，输入cron表达式与要执行的命令即可&lt;/li&gt;
+  &lt;li&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/2_0/duet-2-0-7-2.zip&quot;&gt;duet for Mac&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;ul&gt;
+              &lt;li&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;echo ‘crontest’ » ~/crontest.txt
+```&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;iPad
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/duet-display/id935754064?mt=8&quot;&gt;duet for iPad&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Mac
-    &lt;ul&gt;
-      &lt;li&gt;下载解压安装即可&lt;/li&gt;
-      &lt;li&gt;【系统偏好设置】-【安全性与隐私】-【辅助功能】-【允许duet控制您的电脑】&lt;/li&gt;
-      &lt;li&gt;由于duet需要安装需要额外的驱动程序，安装完成后，关闭电脑，再次打开（&lt;strong&gt;注意不是重启，是关闭后再打开&lt;/strong&gt;）&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;iPad
-    &lt;ul&gt;
-      &lt;li&gt;App Store安装即可，无需额外设置&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;使用&quot;&gt;使用&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Mac运行duet&lt;/li&gt;
-  &lt;li&gt;将iPad通过lightning数据线与Mac连接&lt;/li&gt;
-  &lt;li&gt;打开iPad duet&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;参考链接&quot;&gt;参考链接&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.duetdisplay.com&quot;&gt;官网&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://help.duetdisplay.com/getting-started&quot;&gt;getting-started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Ex-Apple Engineers turn your iPad into an extra display.</summary></entry><entry><title type="html">Mac install rbenv &amp;amp; ruby</title><link href="http://localhost:4000/2019/05/26/Mac-install-rbenv-&-ruby.html" rel="alternate" type="text/html" title="Mac install rbenv &amp; ruby" /><published>2019-05-26T00:00:00+08:00</published><updated>2019-05-26T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/26/Mac%20install%20rbenv%20&amp;%20ruby</id><content type="html" xml:base="http://localhost:4000/2019/05/26/Mac-install-rbenv-&amp;-ruby.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Use rbenv to pick a Ruby version for your application and guarantee that your development environment matches production.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;安装rbenv&quot;&gt;安装rbenv&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install rbenv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rbenv init
----------------------------------------
-# Load rbenv automatically by appending
-# the following to ~/.zshrc:
-
-eval &quot;$(rbenv init -)&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vi .zshrc 
-add eval &quot;$(rbenv init -)&quot; to .zshrc 
-$ source .zshrc 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
----------------------------------------------------
-Checking for `rbenv' in PATH: /usr/local/bin/rbenv
-Checking for rbenv shims in PATH: OK
-Checking `rbenv install' support: /usr/local/bin/rbenv-install (ruby-build 20190423)
-Counting installed Ruby versions: none
-  There aren't any Ruby versions installed under `/Users/luoxiaolei/.rbenv/versions'.
-  You can install Ruby versions like so: rbenv install 2.2.4
-Checking RubyGems settings: OK
-Auditing installed plugins: OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;安装ruby&quot;&gt;安装ruby&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# list all available versions:
-$ rbenv install -l
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# install a Ruby version:
-$ rbenv install 2.6.3
----------------------------------------------------
-ruby-build: use openssl from homebrew
-Downloading ruby-2.6.3.tar.bz2...
--&amp;gt; https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.bz2
-Installing ruby-2.6.3...
-Installed ruby-2.6.3 to /Users/luoxiaolei/.rbenv/versions/2.6.3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rbenv version
-system (set by /Users/luoxiaolei/.rbenv/version)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rbenv local 2.6.3
-$ rbenv version    
-2.6.3 (set by /Users/luoxiaolei/.ruby-version)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;安装ruby-gems&quot;&gt;安装Ruby gems&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 切换版本后需要刷新一下，否则安装报错
------------------------------------------------
-gem install bundler
-Fetching: bundler-2.0.1.gem (100%)
-ERROR:  While executing gem ... (Gem::FilePermissionError)
-    You don't have write permissions for the /Library/Ruby/Gems/2.3.0 directory.
------------------------------------------------
-$ rbenv rehash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install bundler
---------------------------------------------------
-Fetching bundler-2.0.1.gem
-Successfully installed bundler-2.0.1
-Parsing documentation for bundler-2.0.1
-Installing ri documentation for bundler-2.0.1
-Done installing documentation for bundler after 2 seconds
-1 gem installed
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 查看gem安装位置
-gem env home
-/Users/luoxiaolei/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;参考连接&quot;&gt;参考连接&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rbenv/rbenv#how-rbenv-hooks-into-your-shell&quot;&gt;rbenv&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Use rbenv to pick a Ruby version for your application and guarantee that your development environment matches production.</summary></entry><entry><title type="html">Mac 搭建jekyll</title><link href="http://localhost:4000/2019/05/26/Mac-%E6%90%AD%E5%BB%BAJekyll.html" rel="alternate" type="text/html" title="Mac 搭建jekyll" /><published>2019-05-26T00:00:00+08:00</published><updated>2019-05-26T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/26/Mac%20%E6%90%AD%E5%BB%BAJekyll</id><content type="html" xml:base="http://localhost:4000/2019/05/26/Mac-%E6%90%AD%E5%BB%BAJekyll.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, extendable, static site generator. You give it text written in your favorite markup language and it churns through layouts to create a static website. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://luoxiaolei.github.io/2019/05/26/Mac-install-rbenv-&amp;amp;-ruby.html&quot;&gt;Install a full Ruby development environment&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Install Jekyll and bundler gems&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
-----------------------------
-Fetching safe_yaml-1.0.5.gem
-Fetching forwardable-extended-2.6.0.gem
-Fetching liquid-4.0.3.gem
-Fetching kramdown-1.17.0.gem
-Fetching ruby_dep-1.5.0.gem
-Fetching rouge-3.3.0.gem
-Fetching pathutil-0.16.2.gem
-Fetching mercenary-0.3.6.gem
-Fetching ffi-1.11.1.gem
-Fetching rb-inotify-0.10.0.gem
-Fetching rb-fsevent-0.10.3.gem
-Fetching listen-3.1.5.gem
-Fetching jekyll-watch-2.2.1.gem
-Fetching sass-listen-4.0.0.gem
-Fetching sass-3.7.4.gem
-Fetching jekyll-sass-converter-1.5.2.gem
-Fetching concurrent-ruby-1.1.5.gem
-Fetching i18n-0.9.5.gem
-Fetching http_parser.rb-0.6.0.gem
-Fetching eventmachine-1.2.7.gem
-Fetching em-websocket-0.5.1.gem
-Fetching colorator-1.1.0.gem
-Fetching public_suffix-3.0.3.gem
-Fetching addressable-2.6.0.gem
-Fetching jekyll-3.8.5.gem
-Successfully installed safe_yaml-1.0.5
-Successfully installed rouge-3.3.0
-Successfully installed forwardable-extended-2.6.0
-Successfully installed pathutil-0.16.2
-Successfully installed mercenary-0.3.6
-Successfully installed liquid-4.0.3
-Successfully installed kramdown-1.17.0
-Successfully installed ruby_dep-1.5.0
-Building native extensions. This could take a while...
-Successfully installed ffi-1.11.1
-Successfully installed rb-inotify-0.10.0
-Successfully installed rb-fsevent-0.10.3
-Successfully installed listen-3.1.5
-Successfully installed jekyll-watch-2.2.1
-Successfully installed sass-listen-4.0.0
-
-Ruby Sass has reached end-of-life and should no longer be used.
-
-* If you use Sass as a command-line tool, we recommend using Dart Sass, the new
-  primary implementation: https://sass-lang.com/install
-
-* If you use Sass as a plug-in for a Ruby web framework, we recommend using the
-  sassc gem: https://github.com/sass/sassc-ruby#readme
-
-* For more details, please refer to the Sass blog:
-  https://sass-lang.com/blog/posts/7828841
-
-Successfully installed sass-3.7.4
-Successfully installed jekyll-sass-converter-1.5.2
-Successfully installed concurrent-ruby-1.1.5
-Successfully installed i18n-0.9.5
-Building native extensions. This could take a while...
-Successfully installed http_parser.rb-0.6.0
-Building native extensions. This could take a while...
-Successfully installed eventmachine-1.2.7
-Successfully installed em-websocket-0.5.1
-Successfully installed colorator-1.1.0
-Successfully installed public_suffix-3.0.3
-Successfully installed addressable-2.6.0
-Successfully installed jekyll-3.8.5
-Parsing documentation for safe_yaml-1.0.5
-Installing ri documentation for safe_yaml-1.0.5
-Parsing documentation for rouge-3.3.0
-Installing ri documentation for rouge-3.3.0
-Parsing documentation for forwardable-extended-2.6.0
-Installing ri documentation for forwardable-extended-2.6.0
-Parsing documentation for pathutil-0.16.2
-Installing ri documentation for pathutil-0.16.2
-Parsing documentation for mercenary-0.3.6
-Installing ri documentation for mercenary-0.3.6
-Parsing documentation for liquid-4.0.3
-Installing ri documentation for liquid-4.0.3
-Parsing documentation for kramdown-1.17.0
-Installing ri documentation for kramdown-1.17.0
-Parsing documentation for ruby_dep-1.5.0
-Installing ri documentation for ruby_dep-1.5.0
-Parsing documentation for ffi-1.11.1
-Installing ri documentation for ffi-1.11.1
-Parsing documentation for rb-inotify-0.10.0
-Installing ri documentation for rb-inotify-0.10.0
-Parsing documentation for rb-fsevent-0.10.3
-Installing ri documentation for rb-fsevent-0.10.3
-Parsing documentation for listen-3.1.5
-Installing ri documentation for listen-3.1.5
-Parsing documentation for jekyll-watch-2.2.1
-Installing ri documentation for jekyll-watch-2.2.1
-Parsing documentation for sass-listen-4.0.0
-Installing ri documentation for sass-listen-4.0.0
-Parsing documentation for sass-3.7.4
-Installing ri documentation for sass-3.7.4
-Parsing documentation for jekyll-sass-converter-1.5.2
-Installing ri documentation for jekyll-sass-converter-1.5.2
-Parsing documentation for concurrent-ruby-1.1.5
-Installing ri documentation for concurrent-ruby-1.1.5
-Parsing documentation for i18n-0.9.5
-Installing ri documentation for i18n-0.9.5
-Parsing documentation for http_parser.rb-0.6.0
-unknown encoding name &quot;chunked\r\n\r\n25&quot; for ext/ruby_http_parser/vendor/http-parser-java/tools/parse_tests.rb, skipping
-Installing ri documentation for http_parser.rb-0.6.0
-Parsing documentation for eventmachine-1.2.7
-Installing ri documentation for eventmachine-1.2.7
-Parsing documentation for em-websocket-0.5.1
-Installing ri documentation for em-websocket-0.5.1
-Parsing documentation for colorator-1.1.0
-Installing ri documentation for colorator-1.1.0
-Parsing documentation for public_suffix-3.0.3
-Installing ri documentation for public_suffix-3.0.3
-Parsing documentation for addressable-2.6.0
-Installing ri documentation for addressable-2.6.0
-Parsing documentation for jekyll-3.8.5
-Installing ri documentation for jekyll-3.8.5
-Done installing documentation for safe_yaml, rouge, forwardable-extended, pathutil, mercenary, liquid, kramdown, ruby_dep, ffi, rb-inotify, rb-fsevent, listen, jekyll-watch, sass-listen, sass, jekyll-sass-converter, concurrent-ruby, i18n, http_parser.rb, eventmachine, em-websocket, colorator, public_suffix, addressable, jekyll after 41 seconds
-Successfully installed bundler-2.0.1
-Parsing documentation for bundler-2.0.1
-Done installing documentation for bundler after 1 seconds
-26 gems installed
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Create a new Jekyll site at ./myblog&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new myblog
-----------------------------------------
-Running bundle install in /Users/luoxiaolei/Documents/project/ruby/myblog... 
-
-  Bundler: Fetching gem metadata from https://rubygems.org/...............
-  Bundler: Fetching gem metadata from https://rubygems.org/..
-  Bundler: Resolving dependencies...
-  Bundler: Using public_suffix 3.0.3
-  Bundler: Using addressable 2.6.0
-  Bundler: Using bundler 2.0.1
-  Bundler: Using colorator 1.1.0
-  Bundler: Using concurrent-ruby 1.1.5
-  Bundler: Using eventmachine 1.2.7
-  Bundler: Using http_parser.rb 0.6.0
-  Bundler: Using em-websocket 0.5.1
-  Bundler: Using ffi 1.11.1
-  Bundler: Using forwardable-extended 2.6.0
-  Bundler: Using i18n 0.9.5
-  Bundler: Using rb-fsevent 0.10.3
-  Bundler: Using rb-inotify 0.10.0
-  Bundler: Using sass-listen 4.0.0
-  Bundler: Using sass 3.7.4
-  Bundler: Using jekyll-sass-converter 1.5.2
-  Bundler: Using ruby_dep 1.5.0
-  Bundler: Using listen 3.1.5
-  Bundler: Using jekyll-watch 2.2.1
-  Bundler: Using kramdown 1.17.0
-  Bundler: Using liquid 4.0.3
-  Bundler: Using mercenary 0.3.6
-  Bundler: Using pathutil 0.16.2
-  Bundler: Using rouge 3.3.0
-  Bundler: Using safe_yaml 1.0.5
-  Bundler: Using jekyll 3.8.5
-  Bundler: Fetching jekyll-feed 0.12.1
-  Bundler: Installing jekyll-feed 0.12.1
-  Bundler: Fetching jekyll-seo-tag 2.6.1
-  Bundler: Installing jekyll-seo-tag 2.6.1
-  Bundler: Fetching minima 2.5.0
-  Bundler: Installing minima 2.5.0
-  Bundler: Bundle complete! 4 Gemfile dependencies, 29 gems now installed.
-  Bundler: Use `bundle info [gemname]` to see where a bundled gem is installed.The dependency tzinfo-data (&amp;gt;= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
-New jekyll site installed in /Users/luoxiaolei/Documents/project/ruby/myblog. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Change into your new directory&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd myblog
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Build the site and make it available on a local server&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
----------------------------------------
-Configuration file: /Users/luoxiaolei/Documents/project/ruby/myblog/_config.yml
-            Source: /Users/luoxiaolei/Documents/project/ruby/myblog
-       Destination: /Users/luoxiaolei/Documents/project/ruby/myblog/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-       Jekyll Feed: Generating feed for posts
-                    done in 0.399 seconds.
- Auto-regeneration: enabled for '/Users/luoxiaolei/Documents/project/ruby/myblog'
-    Server address: http://127.0.0.1:4000/
-  Server running... press ctrl-c to stop.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Now browse to http://localhost:4000&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;参考链接&quot;&gt;参考链接&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Quickstart&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Jekyll is a simple, extendable, static site generator. You give it text written in your favorite markup language and it churns through layouts to create a static website. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.</summary></entry><entry><title type="html">Arthas用法</title><link href="http://localhost:4000/tech/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html" rel="alternate" type="text/html" title="Arthas用法" /><published>2019-05-25T10:33:13+08:00</published><updated>2019-05-25T10:33:13+08:00</updated><id>http://localhost:4000/tech/2019/05/25/Arthas%E7%94%A8%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/tech/2019/05/25/Arthas%E7%94%A8%E6%B3%95.html">&lt;h3 id=&quot;简介&quot;&gt;简介&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;当你遇到以下类似问题而束手无策时，Arthas可以帮助你解决：&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;这个类从哪个 jar 包加载的？ 为什么会报各种类相关的 Exception？&lt;/li&gt;
-  &lt;li&gt;我改的代码为什么没有执行到？
-难道是我没 commit？分支搞错了？&lt;/li&gt;
-  &lt;li&gt;遇到问题无法在线上debug，难道只能通过加日志再重新发布吗？&lt;/li&gt;
-  &lt;li&gt;线上遇到某个用户的数据处理有问题，但线上同样无法 debug，线下无法重现！&lt;/li&gt;
-  &lt;li&gt;是否有一个全局视角来查看系统的运行状况？&lt;/li&gt;
-  &lt;li&gt;有什么办法可以监控到JVM的实时运行状态？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
-&lt;h4 id=&quot;快速安装&quot;&gt;快速安装&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://alibaba.github.io/arthas/arthas-boot.jar
-java -jar arthas-boot.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;aliyun的镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar --repo-mirror aliyun --use-http
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;gitee镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://arthas.gitee.io/arthas-boot.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Arthas 支持在 Linux/Unix/Mac 等平台上一键安装，请复制以下内容，并粘贴到命令行中，敲 回车 执行即可&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -L https://alibaba.github.io/arthas/install.sh | sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;gitee镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -L https://arthas.gitee.io/install.sh | sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;全量安装&quot;&gt;全量安装&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;amp;g=com.taobao.arthas&amp;amp;a=arthas-packaging&amp;amp;e=zip&amp;amp;c=bin&amp;amp;v=LATEST&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;解压后，在文件夹里有arthas-boot.jar，直接用java -jar的方式启动&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;打印帮助信息&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar -h
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;手动安装&quot;&gt;手动安装&lt;/h4&gt;
-&lt;h5 id=&quot;linux&quot;&gt;Linux&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://maven.aliyun.com/repository/public/com/taobao/arthas/arthas-packaging/3.x.x/arthas-packaging-3.x.x-bin.zip&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;解压缩arthas的压缩包
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;unzip arthas-packaging-bin.zip
+  &lt;li&gt;查看cron任务
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crontab -l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;安装Arthas（注意，这里根据你需要诊断的Java进程的所属用户进行切换）
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo su admin
-rm -rf /home/admin/.arthas/lib/*
-cd arthas
-./install-local.sh
+  &lt;li&gt;启动cron
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;whereis cron
+sudo /usr/sbin/cron start
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;启动Arthas
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./as.sh
+  &lt;li&gt;Linux查看crontab执行日志
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cat /var/log/corn
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h5 id=&quot;windows&quot;&gt;Windows&lt;/h5&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://maven.aliyun.com/repository/public/com/taobao/arthas/arthas-packaging/3.x.x/arthas-packaging-3.x.x-bin.zip&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;解压缩arthas的压缩包&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;基本用法&quot;&gt;基本用法&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;启用arthas&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;选择应用java进程&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar arthas-boot.jar
-* [1]: 35542
-  [2]: 71560 arthas-demo.jar
-Demo进程是第2个，则输入2，再输入回车/enter
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;查看dashboard&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dashboard
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;通过thread命令来获取到arthas-demo进程的Main Class&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;thread 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;通过jad来反编译Main Class&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jad demo.MathGame
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;通过watch命令来查看demo.MathGame#primeFactors函数的返回值&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;watch demo.MathGame primeFactors returnObj
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;退出arthas&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;quit或者exit Attach到目标进程上的arthas还会继续运行，端口会保持开放，下次连接时可以直接连接上。
-shutdown 完全退出arthas
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;卸载&quot;&gt;卸载&lt;/h3&gt;
-&lt;h4 id=&quot;linux-1&quot;&gt;Linux&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm -rf ~/.arthas/
-rm -rf ~/logs/arthas
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;windows-1&quot;&gt;Windows&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;直接删除user home下面的.arthas和logs/arthas目录
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;常用命令&quot;&gt;常用命令&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;sysprop 打印所有的System Properties信息
-    &lt;ul&gt;
-      &lt;li&gt;sysprop java.version&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sysprop | grep user&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;sysprop testKey testValue&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;sysenv 命令可以获取到环境变量。和sysprop命令类似。&lt;/li&gt;
-  &lt;li&gt;jvm 命令会打印出JVM的各种详细信息。&lt;/li&gt;
-  &lt;li&gt;dashboard 命令可以查看当前系统的实时数据面板。输入 Q 或者 Ctrl+C 可以退出dashboard命令。&lt;/li&gt;
-  &lt;li&gt;thread 查看所有线程信息&lt;/li&gt;
-  &lt;li&gt;thread 16 查看线程ID 16的栈：&lt;/li&gt;
-  &lt;li&gt;thread -n 3 查看CPU使用率top n线程的栈&lt;/li&gt;
-  &lt;li&gt;thread -n 3 -i 5000 查看5秒内的CPU使用率top n线程栈&lt;/li&gt;
-  &lt;li&gt;thread -b 查找线程是否有阻塞&lt;/li&gt;
-  &lt;li&gt;java -jar arthas-boot.jar –target-ip 默认情况下，arthas yourip server侦听的是 127.0.0.1 这个IP，如果希望远程可以访问，可以使用–target-ip的参数。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;参考链接&quot;&gt;参考链接&lt;/h3&gt;
+&lt;h1 id=&quot;示例&quot;&gt;示例&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* * * * * /home/dan/bin/script.sh: 每分钟运行。
+0 * * * * /home/dan/bin/script.sh: 每小时运行。
+0 0 * * * /home/dan/bin/script.sh: 每天零点运行。
+0 9,18 * * * /home/dan/bin/script.sh: 在每天的9AM和6PM运行。
+0 9-18 * * * /home/dan/bin/script.sh: 在9AM到6PM的每个小时运行。
+0 9-18 * * 1-5 /home/dan/bin/script.sh: 周一到周五的9AM到6PM每小时运行。
+*/10 * * * * /home/dan/bin/script.sh: 每10分钟运行。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/index.html&quot;&gt;arthas&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/manual-install.html&quot;&gt;手动安装arthas&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/watch.html&quot;&gt;watch用法&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/arthas-tutorials?language=cn&quot;&gt;arthas-tutorials基础教程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://alibaba.github.io/arthas/arthas-tutorials?language=cn&amp;amp;id=arthas-advanced&quot;&gt;arthas-tutorials-advanced进阶教程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。</summary></entry></feed>
+  &lt;li&gt;&lt;a href=&quot;https://www.linuxidc.com/Linux/2015-02/113836.htm&quot;&gt;Linux系统入门学习：在Linux中加入cron任务&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">crontab介绍 用于创建定时执行的任务</summary></entry><entry><title type="html">Homebrew Install Permission denied</title><link href="http://localhost:4000/2019/08/27/Homebrew-install-Permission-denied.html" rel="alternate" type="text/html" title="Homebrew Install Permission denied" /><published>2019-08-27T00:00:00+08:00</published><updated>2019-08-27T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/27/Homebrew-install-Permission%20denied</id><content type="html" xml:base="http://localhost:4000/2019/08/27/Homebrew-install-Permission-denied.html">&lt;h1 id=&quot;解决办法&quot;&gt;解决办法&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R `whoami` /usr/local/Homebrew/
+ 
+sudo chown -R $(whoami) $(brew --prefix)/*
+ 
+sudo mkdir /usr/local/Frameworks
+ 
+sudo chown -R `whoami` /usr/local/Frameworks/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mobibrw.com/2018/13593&quot;&gt;macOS High Sierra(10.13.6)解决”Error: Running Homebrew as root is extremely dangerous and no longer supported.”&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">解决办法 sudo chown -R `whoami` /usr/local/Homebrew/ sudo chown -R $(whoami) $(brew --prefix)/* sudo mkdir /usr/local/Frameworks sudo chown -R `whoami` /usr/local/Frameworks/</summary></entry><entry><title type="html">Mongodb入门笔记</title><link href="http://localhost:4000/2019/07/30/MongoDB%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0.html" rel="alternate" type="text/html" title="Mongodb入门笔记" /><published>2019-07-30T00:00:00+08:00</published><updated>2019-07-30T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/30/MongoDB%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0</id><content type="html" xml:base="http://localhost:4000/2019/07/30/MongoDB%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0.html">&lt;h1 id=&quot;环境&quot;&gt;环境&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;MacOS10.14.4&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;安装&quot;&gt;安装&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew tap mongodb/brew
+brew install mongodb-community@4.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;运行&quot;&gt;运行&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;in the foreground&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mongod --config /usr/local/etc/mongod.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;p&gt;as a macOS service&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew services start mongodb-community@4.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;连接并使用&quot;&gt;连接并使用&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mongo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;基本操作&quot;&gt;基本操作&lt;/h1&gt;
+&lt;h2 id=&quot;create-增&quot;&gt;Create 增&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;插入一个&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.insertOne(
+   { item: &quot;canvas&quot;, qty: 100, tags: [&quot;cotton&quot;], size: { h: 28, w: 35.5, uom: &quot;cm&quot; } }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;p&gt;插入多个&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.insertMany([
+   { item: &quot;journal&quot;, qty: 25, tags: [&quot;blank&quot;, &quot;red&quot;], size: { h: 14, w: 21, uom: &quot;cm&quot; } },
+   { item: &quot;mat&quot;, qty: 85, tags: [&quot;gray&quot;], size: { h: 27.9, w: 35.5, uom: &quot;cm&quot; } },
+   { item: &quot;mousepad&quot;, qty: 25, tags: [&quot;gel&quot;, &quot;blue&quot;], size: { h: 19, w: 22.85, uom: &quot;cm&quot; } }
+])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;read-查&quot;&gt;Read 查&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;查询单个&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.find( { item: &quot;canvas&quot; } )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;查询所有&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.find( {} )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;利用操作符指定查询条件&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.find( { status: { $in: [ &quot;A&quot;, &quot;D&quot; ] } } )
+含义等价于
+SELECT * FROM inventory WHERE status in (&quot;A&quot;, &quot;D&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AND&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.find( { status: &quot;A&quot;, qty: { $lt: 30 } } )
+含义等价于
+SELECT * FROM inventory WHERE status = &quot;A&quot; AND qty &amp;lt; 30
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;OR&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.find( { $or: [ { status: &quot;A&quot; }, { qty: { $lt: 30 } } ] } )
+含义等价于
+SELECT * FROM inventory WHERE status = &quot;A&quot; OR qty &amp;lt; 30
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AND OR&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.find( {
+     status: &quot;A&quot;,
+     $or: [ { qty: { $lt: 30 } }, { item: /^p/ } ]
+} )
+含义等价于
+SELECT * FROM inventory WHERE status = &quot;A&quot; AND ( qty &amp;lt; 30 OR item LIKE &quot;p%&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;update-改&quot;&gt;Update 改&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;update one&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.updateOne(
+   { item: &quot;paper&quot; },
+   {
+     $set: { &quot;size.uom&quot;: &quot;cm&quot;, status: &quot;P&quot; },
+     $currentDate: { lastModified: true }
+   }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;update many&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.updateMany(
+   { &quot;qty&quot;: { $lt: 50 } },
+   {
+     $set: { &quot;size.uom&quot;: &quot;in&quot;, status: &quot;P&quot; },
+     $currentDate: { lastModified: true }
+   }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;replace one&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.replaceOne(
+   { item: &quot;paper&quot; },
+   { item: &quot;paper&quot;, instock: [ { warehouse: &quot;A&quot;, qty: 60 }, { warehouse: &quot;B&quot;, qty: 40 } ] }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;delete-删&quot;&gt;Delete 删&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;delete all&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.deleteMany({})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;delete many&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.deleteMany({ status : &quot;A&quot; })
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;delete one&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.inventory.deleteOne( { status: &quot;D&quot; } )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/&quot;&gt;Install MongoDB Community Edition on macOS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/insert-documents/&quot;&gt;insert-documents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/query-documents/&quot;&gt;query-documents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/update-documents/&quot;&gt;update-documents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/remove-documents/&quot;&gt;remove-documents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">环境 MacOS10.14.4</summary></entry><entry><title type="html">Mac终端打开androidstudio已创建模拟器</title><link href="http://localhost:4000/2019/07/30/Mac%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80AndroidStudio%E5%B7%B2%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8.html" rel="alternate" type="text/html" title="Mac终端打开androidstudio已创建模拟器" /><published>2019-07-30T00:00:00+08:00</published><updated>2019-07-30T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/30/Mac%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80AndroidStudio%E5%B7%B2%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8</id><content type="html" xml:base="http://localhost:4000/2019/07/30/Mac%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80AndroidStudio%E5%B7%B2%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8.html">&lt;h1 id=&quot;目的&quot;&gt;目的&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;偶尔我们只是想运行模拟器，并不想打开AndroidStudio，这时我们可以从终端找到emulator，通过emulator来启动指定名称的模拟器&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;步骤&quot;&gt;步骤&lt;/h1&gt;
+&lt;p&gt;1.找到emulator所在位置&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find . -name emulator
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2.查看已创建的模拟器列表&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./emulator -list-avds
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;3.启动模拟器&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./emulator @Nexus_5X_API_27_x86
+或
+./emulator -avd Nexus_5X_API_27_x86
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code-examples.net/zh-CN/q/4be7e8&quot;&gt;单独启动android模拟器 如何从命令行启动Android模拟器?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">目的 偶尔我们只是想运行模拟器，并不想打开AndroidStudio，这时我们可以从终端找到emulator，通过emulator来启动指定名称的模拟器</summary></entry><entry><title type="html">好东西持续分享</title><link href="http://localhost:4000/2019/07/21/%E5%A5%BD%E4%B8%9C%E8%A5%BF%E6%8C%81%E7%BB%AD%E5%88%86%E4%BA%AB.html" rel="alternate" type="text/html" title="好东西持续分享" /><published>2019-07-21T00:00:00+08:00</published><updated>2019-07-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/21/%E5%A5%BD%E4%B8%9C%E8%A5%BF%E6%8C%81%E7%BB%AD%E5%88%86%E4%BA%AB</id><content type="html" xml:base="http://localhost:4000/2019/07/21/%E5%A5%BD%E4%B8%9C%E8%A5%BF%E6%8C%81%E7%BB%AD%E5%88%86%E4%BA%AB.html">&lt;h3 id=&quot;app&quot;&gt;App&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/notebook-take-notes-sync/id973801089&quot;&gt;Notebook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/%E5%A5%87%E7%82%B9-%E8%BD%BB%E8%BD%BB%E6%9D%BE%E6%9D%BE%E5%88%B7%E5%BE%AE%E5%8D%9A/id947792507&quot;&gt;奇点&lt;/a&gt;（微博客户端）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/duet-display/id935754064?mt=8&quot;&gt;duet&lt;/a&gt;（通过iPad共享电脑屏幕工具）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/meng-ge-ying-yu-yuan-ban-yue/id483247714&quot;&gt;蒙哥英语原版阅读器 (Meerkat Reader)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;book&quot;&gt;Book&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://automatetheboringstuff.com/&quot;&gt;《Automate the Boring Stuff with Python》 &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;博客&quot;&gt;博客&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;津津乐道&lt;/li&gt;
+  &lt;li&gt;段子来了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;course&quot;&gt;Course&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/qin-shi-huang&quot;&gt;吕世浩《秦始皇》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.chongdiantou.com/&quot;&gt;充电头网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;movie&quot;&gt;Movie&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.iqiyi.com/v_19rqttcxyo.html?vfm=2008_aldbd&quot;&gt;《徒手攀岩》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;《绿皮书》&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mac&quot;&gt;Mac&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cyberduck.io/&quot;&gt;Cyberduck&lt;/a&gt;（ftp客户端）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://motrix.app/&quot;&gt;motrix&lt;/a&gt;（下载客户端）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/manico/id724472954?mt=12&quot;&gt;Manico&lt;/a&gt;（一个强大的 App 启动器和切换器）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/yichengchen/clashX&quot;&gt;clashX&lt;/a&gt;（代理客户端）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://matthewpalmer.net/vanilla/&quot;&gt;vanilla&lt;/a&gt;（隐藏菜单栏图标）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://daisydiskapp.com/&quot;&gt;daisydisk&lt;/a&gt;（清理空间）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rugarciap.com/turbo-boost-switcher-for-os-x/&quot;&gt;turbo-boost-switcher&lt;/a&gt;（开启省电模式）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tripmode.ch/&quot;&gt;tripmode&lt;/a&gt;（指定应用可以联网）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zipzapmac.com/Go2Shell&quot;&gt;Go2Shell&lt;/a&gt;(Finder快速打开当前路径Terminal)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/ssrconnectpro/id1376924741&quot;&gt;ssrconnectpro&lt;/a&gt;（代理客户端）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/insidegui/PodcastMenu&quot;&gt;PodcastMenu&lt;/a&gt;(Overcast非官方Mac客户端)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://macromates.com/&quot;&gt;TextMate&lt;/a&gt;（文本编辑器）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://brettterpstra.com/projects/bunch/&quot;&gt;bunch&lt;/a&gt;（批量打开程序或网页）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://brettterpstra.com/downloads/&quot;&gt;brettterpstra&lt;/a&gt;（Mac实用小插件）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/cn/app/battery-stats-for-airpods/id1405763798?mt=12&quot;&gt;Battery Stats for AirPods&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;online-tool&quot;&gt;Online tool&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://optimizilla.com/zh/&quot;&gt;在线图片优化&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.iloveimg.com/zh-cn/compress-image&quot;&gt;iloveimg压缩图片&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lab.lyric.im/wxformat/&quot;&gt;wechat-format&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.4kdy.net&quot;&gt;4K电影&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thecrashcourse.com/&quot;&gt;crashcourse&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cloudconvert.com&quot;&gt;cloudconvert&lt;/a&gt;（格式转换工具）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://getpodcast.xyz/&quot;&gt;getpodcast&lt;/a&gt;（博客feed订阅）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.theurlist.com/&quot;&gt;theurlist&lt;/a&gt;（连接分享）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sg.godaddy.com&quot;&gt;godaddy&lt;/a&gt;（域名注册）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linode.com/&quot;&gt;linode&lt;/a&gt;（VPS）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://winscp.net/eng/index.php&quot;&gt;WinSCP&lt;/a&gt;（ftp客户端）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fastcopy.jp/en/&quot;&gt;fastcopy&lt;/a&gt;（快速复制粘贴）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ditto.com/&quot;&gt;ditto&lt;/a&gt;（剪贴板历史）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.remoteutilities.com&quot;&gt;remoteutilities&lt;/a&gt;（远程工具，类似Teamview）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;搜索引擎&quot;&gt;搜索引擎&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com.hk/&quot;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;图片素材&quot;&gt;图片素材&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gallery.manypixels.co/&quot;&gt;Illustration Gallery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unsplash.com/&quot;&gt;unsplash&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mixkit.co/art/&quot;&gt;mixkit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;command&quot;&gt;Command&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;vlookup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;chrome-extensions&quot;&gt;chrome-extensions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/extensions-manager-aka-sw/lpleipinonnoibneeejgjnoeekmbopbc/related?utm_source=chrome-ntp-icon&quot;&gt;Extensions Manager &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd&quot;&gt;LastPass: Free Password Manager
+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/secure-shell-app/pnhechapfaindjhompbnflcldabbghjo&quot;&gt;secure-shell-app&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/puppeteer-recorder/djeegiggegleadkkbgopoonhjimgehda&quot;&gt;recorder&lt;/a&gt;（脚本自动化浏览器操作）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;游戏&quot;&gt;游戏&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;网页小游戏
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://loderunnerwebgame.com/game/&quot;&gt;淘金者&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;理财&quot;&gt;理财&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://winnielife.com/about/&quot;&gt;winnielife&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gocurrycracker.com/&quot;&gt;gocurrycracker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;电影&quot;&gt;电影&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://22tu.cc&quot;&gt;迅播&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/search/title?count=100&amp;amp;groups=oscar_best_picture_winners&amp;amp;sort=year,desc&amp;amp;ref_=nv_ch_osc&quot;&gt;奥斯卡获奖影片&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.msj1.com/&quot;&gt;天天看美剧&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;youtober&quot;&gt;Youtober&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCSs4A6HYKmHA2MG_0z-F0xw&quot;&gt;李永乐老师&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;学习网站&quot;&gt;学习网站&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.codecademy.com&quot;&gt;codecademy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">App Notebook 奇点（微博客户端） duet（通过iPad共享电脑屏幕工具） 蒙哥英语原版阅读器 (Meerkat Reader)</summary></entry><entry><title type="html">Macos配置双网</title><link href="http://localhost:4000/2019/07/12/MacOS%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91.html" rel="alternate" type="text/html" title="Macos配置双网" /><published>2019-07-12T00:00:00+08:00</published><updated>2019-07-12T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/12/MacOS%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91</id><content type="html" xml:base="http://localhost:4000/2019/07/12/MacOS%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91.html">&lt;h1 id=&quot;目的&quot;&gt;目的&lt;/h1&gt;
+&lt;p&gt;日常工作中，我们可能会同时需要用到公司的内网以及互联网，为了避免来回的切换，我们可以通过配置电脑的两个网卡来实现同时访问内网和互联网。&lt;/p&gt;
+
+&lt;h1 id=&quot;环境说明&quot;&gt;环境说明&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;互联网
+    &lt;ul&gt;
+      &lt;li&gt;无线网卡&lt;/li&gt;
+      &lt;li&gt;网关&lt;/li&gt;
+      &lt;li&gt;子网掩码&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;内网
+    &lt;ul&gt;
+      &lt;li&gt;有线网卡&lt;/li&gt;
+      &lt;li&gt;网关 192.168.101.1&lt;/li&gt;
+      &lt;li&gt;子网掩码 255.255.255.0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;配置步骤&quot;&gt;配置步骤&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;查看路由表
+```
+修改前
+netstat -rt&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$ netstat -rt
+Routing tables&lt;/p&gt;
+
+&lt;p&gt;Internet:
+Destination        Gateway            Flags        Refs      Use   Netif Expire
+default            192.168.101.1      UGSc           57        0     en6     &lt;br /&gt;
+default            192.168.31.1       UGScI          13        0     en0&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+列名 | 说明
+---|---
+Destination| 目标地，意思是：后面的参数代表着，如果前往这个ip的话，应该如何分配网关，网卡等，以及状态信息，都是针对前往这个ip的情况的
+Gateway | 网关
+Flags | 标志位
+Refs | 可以简单的理解为重要性，相同的ip，相同的网关，用这个重要性来区分使用哪个网卡
+Use | 使用情况
+Netif | 网卡号，net interface
+
+
+默认情况下，同时连接无线网和内网，只能访问内网
+
+&amp;gt; 根据表上看到，default目标两张网卡可以走，但是refs下看到en10的优先级比较高，根据我的状况，外网地址都无法访问，外网地址属于default部分，所以得出判断en10是有线网卡，因为它的优先级较高导致去外网的ip都由有线网卡进行转发，所以上不了网了，那么自然，en0就是无线网卡。
+
+
+2. [系统偏好设置]-[网络]-[设定服务顺序]-将[Wi-Fi]移动至有线网卡的上面
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;修改后
+netstat -rt&lt;/p&gt;
+
+&lt;p&gt;$ netstat -rt
+Routing tables&lt;/p&gt;
+
+&lt;p&gt;Internet:
+Destination        Gateway            Flags        Refs      Use   Netif Expire
+default            192.168.31.1       UGSc           98        3     en0     &lt;br /&gt;
+default            192.168.101.1      UGScI           2        0     en6&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+修改之后，可以访问互联网，但是访问不了内网
+
+3. 设置指定的ip段通过内网网关来访问内网
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo route add -net 15.45.255.0 -netmask 255.255.255.0 192.168.101.1&lt;/p&gt;
+
+&lt;p&gt;sudo route add -net 15.32.12.0  -netmask 255.255.255.0 192.168.101.1
+```&lt;/p&gt;
+
+&lt;p&gt;说明：
+执行完上述命令，15.45.255.x与15.32.12.x可以通过内网进行访问。&lt;/p&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/807883b2949f&quot;&gt;Macbook利用双网卡同时连内外网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">目的 日常工作中，我们可能会同时需要用到公司的内网以及互联网，为了避免来回的切换，我们可以通过配置电脑的两个网卡来实现同时访问内网和互联网。</summary></entry><entry><title type="html">Linux终端常用命令</title><link href="http://localhost:4000/2019/07/11/Linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" rel="alternate" type="text/html" title="Linux终端常用命令" /><published>2019-07-11T00:00:00+08:00</published><updated>2019-07-11T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/11/Linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4</id><content type="html" xml:base="http://localhost:4000/2019/07/11/Linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">&lt;h1 id=&quot;基本操作&quot;&gt;基本操作&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;展示全部的环境变量
+export
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;搜索可执行文件、源文件 
+whereis ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;在环境变量中搜索可执行文件，并打印完整路径 
+which ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;展示用户命令，系统调用、库函数等 
+whatis ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;文件操作&quot;&gt;文件操作&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;比较文件
+diff file1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;查看文件前10行 
+head
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;创建新文件 
+touch newfile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;文本操作&quot;&gt;文本操作&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;逐行运行，默认使用空格分割，-F表示分割的样式 cat /etc/passwd | awk -F ':' '{print $1}'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正则替换 
+sed 's/reg/replaced/g'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;统计文本行数，单词数，字符数 
+wc file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;目录操作&quot;&gt;目录操作&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;当前目录的路径 
+pwd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;系统网络&quot;&gt;系统网络&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;磁盘使用情况
+df
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;列出你的进程 
+ps
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;文件或目录使用情况 
+du -sh .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;列出当前活动进程 
+top
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;远程连接
+ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OMGZui/bash-step-to-step&quot;&gt;bash-step-to-step&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">基本操作 展示全部的环境变量 export</summary></entry><entry><title type="html">Macos利用terminal访问远程linux服务器</title><link href="http://localhost:4000/2019/07/10/MacOS%E5%88%A9%E7%94%A8Terminal%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8BLinux%E6%9C%8D%E5%8A%A1%E5%99%A8.html" rel="alternate" type="text/html" title="Macos利用terminal访问远程linux服务器" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/10/MacOS%E5%88%A9%E7%94%A8Terminal%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8BLinux%E6%9C%8D%E5%8A%A1%E5%99%A8</id><content type="html" xml:base="http://localhost:4000/2019/07/10/MacOS%E5%88%A9%E7%94%A8Terminal%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8BLinux%E6%9C%8D%E5%8A%A1%E5%99%A8.html">&lt;h1 id=&quot;常用命令&quot;&gt;常用命令&lt;/h1&gt;
+&lt;p&gt;默认22端口访问&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh x.x.x.x
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;指定端口访问&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh x.x.x.x -p port
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;指定用户访问(默认是MacOS当前用户)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh user@x.x.x.x [-p port]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;设置主机别名快捷访问&quot;&gt;设置主机别名，快捷访问&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi ~/.ssh/config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;复制如下内容粘贴至config文件末尾(按需修改)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# xx Server
+Host alias
+        HostName x.x.x.x
+        Port port
+        User root
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;使用&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh alias
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/qq_34581118/article/details/77132208&quot;&gt;使用mac自带ssh连接远程服务器&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">常用命令 默认22端口访问 ssh x.x.x.x</summary></entry><entry><title type="html">Macos局域网访问windows7共享文件</title><link href="http://localhost:4000/2019/07/09/MacOS%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AEWindows7%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6.html" rel="alternate" type="text/html" title="Macos局域网访问windows7共享文件" /><published>2019-07-09T00:00:00+08:00</published><updated>2019-07-09T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/09/MacOS%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AEWindows7%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6</id><content type="html" xml:base="http://localhost:4000/2019/07/09/MacOS%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AEWindows7%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6.html">&lt;h1 id=&quot;配置步骤&quot;&gt;配置步骤&lt;/h1&gt;
+&lt;h2 id=&quot;windows7&quot;&gt;Windows7&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;进入【控制面板】-【网络和共享中心】-【高级共享设置】&lt;/li&gt;
+  &lt;li&gt;启用网络发现&lt;/li&gt;
+  &lt;li&gt;启用文件和打印机共享&lt;/li&gt;
+  &lt;li&gt;选择要共享的文件或文件夹，点击【共享】-【特定用户】&lt;/li&gt;
+  &lt;li&gt;选择Windows7当前登录的用户，点击【共享】&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;macos&quot;&gt;MacOS&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;打开Finder&lt;/li&gt;
+  &lt;li&gt;点击左侧【网络】&lt;/li&gt;
+  &lt;li&gt;在列表中可以发现已经共享的Windows7主机名字&lt;/li&gt;
+  &lt;li&gt;双击主机名进入，然后点击右上角【连接身份】&lt;/li&gt;
+  &lt;li&gt;按提示输入Windows7用户的用户名密码登录即可&lt;/li&gt;
+  &lt;li&gt;连接成功后可以看到Windows7用户的主目录以及共享的目录&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jingyan.baidu.com/article/9113f81bd893be2b3214c707.html&quot;&gt;如何在Mac电脑与Win 7之间实现文件局域网共享&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">配置步骤 Windows7 进入【控制面板】-【网络和共享中心】-【高级共享设置】 启用网络发现 启用文件和打印机共享 选择要共享的文件或文件夹，点击【共享】-【特定用户】 选择Windows7当前登录的用户，点击【共享】</summary></entry><entry><title type="html">百度网盘直链下载助手(macos&amp;amp;chrome)</title><link href="http://localhost:4000/2019/07/08/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B(MacOS&Chrome).html" rel="alternate" type="text/html" title="百度网盘直链下载助手(macos&amp;chrome)" /><published>2019-07-08T00:00:00+08:00</published><updated>2019-07-08T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/08/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B(MacOS&amp;Chrome)</id><content type="html" xml:base="http://localhost:4000/2019/07/08/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B(MacOS&amp;Chrome).html">&lt;h1 id=&quot;简介&quot;&gt;简介&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;众所周知，通过百度网盘（未开通会员）直接下载文件的速度极慢，通过安装浏览器插件可以极大的提高下载速度。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;安装文件&quot;&gt;安装文件&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo&quot;&gt;Tampermonkey&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/neatdownloadmanager-exten/cpcifbdmkopohnnofedkjghjiclmhdah/related&quot;&gt;NeatDownloadManager Extension&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.neatdownloadmanager.com/index.php/en/&quot;&gt;NeatDownloadManager&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;使用流程&quot;&gt;使用流程&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;安装完上述插件及程序&lt;/li&gt;
+  &lt;li&gt;安装&lt;a href=&quot;https://note.youdao.com/&quot;&gt;百度网盘直链下载助手&lt;/a&gt;脚本，安装成功会默认启用该脚本&lt;/li&gt;
+  &lt;li&gt;浏览器打开百度网盘，文件列表上方，默认【下载】按钮附近会出现一个【下载助手】的按钮，点击【下载助手】-【API下载】-【直接下载】，会调用NeatDownloadManager进行下载。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;其他配置&quot;&gt;其他配置&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;NeatDownloadManager可以配置下载的线程
+    &lt;ul&gt;
+      &lt;li&gt;打开NeatDownloadManager&lt;/li&gt;
+      &lt;li&gt;右上角【Setting】&lt;/li&gt;
+      &lt;li&gt;设置【Max Connections per Download】(推荐设置为32)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/syhyz1990/baiduyun/wiki/MacOS%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E&quot;&gt;MacOS平台使用说明&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">简介 众所周知，通过百度网盘（未开通会员）直接下载文件的速度极慢，通过安装浏览器插件可以极大的提高下载速度。</summary></entry></feed>
